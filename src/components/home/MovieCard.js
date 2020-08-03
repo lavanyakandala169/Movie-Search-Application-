@@ -14,6 +14,10 @@ export class MovieCard extends Component {
           <Link className="btn btn-primary" to={'/movie/' + movie.imdbID}>
             Favourites
             <i className="fas fa-chevron-right" />
+          </Link><br/>
+          <Link className="btn btn-primary" to={'/movie/' + movie.imdbID}>
+            Unfavourites
+            <i className="fas fa-chevron-right" />
           </Link>
         </div>
       </div>

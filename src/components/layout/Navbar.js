@@ -13,8 +13,10 @@ function Navbar() {
           </div>
           <ul className="navbar-nav ml-auto text-light d-inline-block">
             <li className="nav-item d-inline-block mr-4">
-              Favourites
+              Favourites 
             </li>
+            
+            
           </ul>
         </div>
       </nav>

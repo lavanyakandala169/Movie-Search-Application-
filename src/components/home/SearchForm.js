@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
+//import Select from 'react-select';
+
 
 import {
   searchMovie,
   fetchMovies,
   setLoading
 } from '../../actions/searchAction';
+
+// const scaryAnimals = [
+//   { label: "Alligators", value: 1 },
+//   { label: "Crocodiles", value: 2 },
+//   { label: "Sharks", value: 3 },
+//   { label: "Small crocodiles", value: 4 },
+//   { label: "Smallest crocodiles", value: 5 },
+//   { label: "Snakes", value: 6 },
+// ];
+
+
 
 export class SearchForm extends Component {
   onChange = e => {
@@ -26,16 +39,26 @@ export class SearchForm extends Component {
           <h1 className="display-4 mb-5">
           Movie Search Application</h1>
           <form id="searchForm" onSubmit={this.onSubmit}>
-            <input
+            
+          {/* <input
               type="text"
               className="form-control"
               name="searchText"
               placeholder="Search Movies, TV Series ..."
               onChange={this.onChange}
-            />
-            <button type="submit" className="btn btn-secondary btn-bg ml-1">
+            />  */}
+            
+  <select className="form-control" onChange={this.onChange}>
+  <option value="" disabled selected>Search Movies, TV Series ...</option>
+  <option>All</option>
+  <option>Movies</option>
+  <option>Series</option>
+  <option>Episodes</option>
+</select> 
+    <button type="submit" className="btn btn-secondary btn-bg ml-1">
               Search
-            </button>
+            </button> 
+            
           </form>
         </div>
       </div>
